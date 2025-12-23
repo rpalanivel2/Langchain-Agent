@@ -1,0 +1,12 @@
+langchain_mcp_adapters
+langchain 
+langchain_openai
+
+streamlit
+google-generativeai
+google-genai
+httpx
+
+python-dotenv
+mcp
+mcp[cli]
