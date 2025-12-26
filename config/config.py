@@ -4,7 +4,6 @@ from dotenv import load_dotenv
 import langsmith as ls
 from langgraph.checkpoint.memory import InMemorySaver
 
-# Memory-based checkpointer for storing intermediate states
 checkpointer = InMemorySaver()
 
 load_dotenv()

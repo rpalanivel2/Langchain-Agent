@@ -4,14 +4,14 @@ from langchain.agents.structured_output import ToolStrategy
 from langchain.agents.middleware import SummarizationMiddleware
 
 from config.model import model
-from tools.tools import client
+from tools.mcp import client
 from models.classmodels import Response
 from config.config import checkpointer
 
 
 async def create_mcp_agent():
-    async with client.session("mcpServers") as session:
-        tools = await load_mcp_tools(session)
+   
+    tools = await client.get_tools()
 
     agent = create_agent(
         model=model,
